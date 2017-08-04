@@ -4,10 +4,18 @@ import { Routes, RouterModule } from '@angular/router';
 // Layouts
 import { FullLayoutComponent } from './layouts/full-layout.component';
 import { SimpleLayoutComponent } from './layouts/simple-layout.component';
+import { LoginComponent } from './pages/login.component';
 
 export const routes: Routes = [
   {
     path: '',
+    component: LoginComponent,
+    data: {
+      title: 'Login'
+    }
+  },
+  {
+    path: 'home',
     component: FullLayoutComponent,
     data: {
       title: 'Home'
@@ -55,7 +63,7 @@ export const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [ RouterModule.forRoot(routes) ],
-  exports: [ RouterModule ]
+  imports: [RouterModule.forRoot(routes)],
+  exports: [RouterModule]
 })
-export class AppRoutingModule {}
+export class AppRoutingModule { }

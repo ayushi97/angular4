@@ -18,7 +18,8 @@ import { AppRoutingModule } from './app.routing';
 // Layouts
 import { FullLayoutComponent } from './layouts/full-layout.component';
 import { SimpleLayoutComponent } from './layouts/simple-layout.component';
-import {ProjectsModule} from './projects/projects.module';
+import { ProjectsModule } from './projects/projects.module';
+import { LoginComponent } from './pages/login.component'
 
 @NgModule({
   imports: [
@@ -33,6 +34,7 @@ import {ProjectsModule} from './projects/projects.module';
     AppComponent,
     FullLayoutComponent,
     SimpleLayoutComponent,
+    LoginComponent,
     NAV_DROPDOWN_DIRECTIVES,
     BreadcrumbsComponent,
     SIDEBAR_TOGGLE_DIRECTIVES,
@@ -42,6 +44,6 @@ import {ProjectsModule} from './projects/projects.module';
     provide: LocationStrategy,
     useClass: HashLocationStrategy
   }],
-  bootstrap: [ AppComponent ]
+  bootstrap: [AppComponent]
 })
 export class AppModule { }
